@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">CORE</string>
+    <string name="drawer_option1"> Home</string>
+    <string name="drawer_option2"> Events</string>
+    <string name="drawer_option3"> EnCORE</string>
+    <string name="drawer_option4"> Contact Us</string>
+    <string name="drawer_option5"> The Team</string>
+    <string-array name="drawer_options">
+        <item>Home</item>
+        <item>Events</item>
+        <item>EnCORE</item>
+        <item>Contact Us</item>
+        <item>The Team</item>
+    </string-array>
 </resources>

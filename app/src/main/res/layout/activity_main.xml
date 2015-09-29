@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--Contents -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width= "match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/material_blue_grey_800"
+        android:elevation="@dimen/toolbar_elevation" />
+
+    <!-- All other stuff goes here i.e. what you wish in you MainActivity -->
+</LinearLayout>
+
+    <!--Actual Drawer -->
+     <android.support.v7.widget.RecyclerView
+          android:id="@+id/drawer_recyclerView"
+         android:layout_width= "@dimen/recyclerView_width"
+         android:layout_height="match_parent"
+         android:layout_gravity="start"
+         android:scrollbars ="vertical"
+         android:background ="@color/white" />
+</android.support.v4.widget.DrawerLayout>
