@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/drawer_header_height"
-    android:background="@color/md_orange_50">
-</RelativeLayout>
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/header_bottom_padding">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/drawer_header_height"
+        android:src="@mipmap/cover_new"/>
+</LinearLayout>

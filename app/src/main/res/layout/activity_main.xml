@@ -8,12 +8,14 @@
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/containerView">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width= "match_parent"
         android:layout_height="wrap_content"
+        android:minHeight="?android:attr/actionBarSize"
         android:background="@color/material_blue_grey_800"
         android:elevation="@dimen/toolbar_elevation" />
 
@@ -27,5 +29,5 @@
          android:layout_height="match_parent"
          android:layout_gravity="start"
          android:scrollbars ="vertical"
-         android:background ="@color/white" />
+         android:background ="@color/md_black_1000" />
 </android.support.v4.widget.DrawerLayout>
