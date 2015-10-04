@@ -4,18 +4,12 @@ import android.support.v4.app.Fragment;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.internal.view.menu.MenuView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import java.util.List;
-
-import butterknife.Bind;
-import butterknife.ButterKnife;
 
 public class DrawerAdapter extends RecyclerView.Adapter<DrawerAdapter.ViewHolder> {
     private static final int HEADER_TYPE = 0;

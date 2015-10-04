@@ -10,6 +10,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.widget.StackView;
+
+import java.util.ArrayList;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -18,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
     @Bind(R.id.drawer_layout) DrawerLayout drawerLayout;
     @Bind(R.id.toolbar)    Toolbar toolbar;
     @Bind(R.id.drawer_recyclerView)  RecyclerView drawerRecyclerView ;
-
     ActionBarDrawerToggle drawerToggle ;
 
     public void onCreate(Bundle savedInstanceState) {

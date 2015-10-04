@@ -12,9 +12,41 @@
     <string-array name="navDrawerIcons">
         <item>@mipmap/home</item>
         <item>@mipmap/events</item>
-        <item>@mipmap/encore</item>
+        <item>@mipmap/encore_nav</item>
         <item>@mipmap/contact</item>
         <item>@mipmap/team</item>
     </string-array>
 
+     <string-array name="event_stack_icon">
+         <item>@mipmap/cm</item>
+         <item>@mipmap/crossword</item>
+         <item>@mipmap/di</item>
+         <item>@mipmap/encore</item>
+         <item>@mipmap/gaming</item>
+         <item>@mipmap/gd</item>
+         <item>@mipmap/hard</item>
+         <item>@mipmap/jq</item>
+         <item>@mipmap/photo</item>
+         <item>@mipmap/progr</item>
+         <item>@mipmap/sq</item>
+         <item>@mipmap/sur</item>
+         <item>@mipmap/three</item>
+         <item>@mipmap/web</item>
+     </string-array>
+    <string-array name="event_stack">
+        <item>Cryptic Marathon</item>
+        <item>Crossword</item>
+        <item>Digital Imaging</item>
+        <item>enCOЯE</item>
+        <item>Gaming</item>
+        <item>Group Discussion</item>
+        <item>Hardware</item>
+        <item>Junior Quiz</item>
+        <item>Photography</item>
+        <item>Programming</item>
+        <item>Senior Quiz</item>
+        <item>Surprise</item>
+        <item>3D Modeling</item>
+        <item>Web Designing</item>
+    </string-array>
 </resources>
