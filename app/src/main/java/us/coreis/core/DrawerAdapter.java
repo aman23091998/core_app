@@ -78,11 +78,6 @@ public class DrawerAdapter extends RecyclerView.Adapter<DrawerAdapter.ViewHolder
                     fragmentTransaction.replace(R.id.containerView,teamFragment);
                     fragmentTransaction.commit();
                     break;
-                default:
-                    Fragment defaultFragment = new HomeFragment();
-                    fragmentTransaction.replace(R.id.containerView,defaultFragment);
-                    fragmentTransaction.commit();
-                    break;
             }
         }
     }
