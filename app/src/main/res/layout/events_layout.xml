@@ -13,7 +13,7 @@
         android:id="@+id/stackView1"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:animateLayoutChanges="true"
+        android:animateLayoutChanges="true" 
         android:loopViews="true">
     </StackView>
 
