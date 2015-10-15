@@ -17,22 +17,22 @@
         <item>@mipmap/team</item>
     </string-array>
 
-     <string-array name="event_stack_icon">
-         <item>@mipmap/cm</item>
-         <item>@mipmap/crossword</item>
-         <item>@mipmap/di</item>
-         <item>@mipmap/encore</item>
-         <item>@mipmap/gaming</item>
-         <item>@mipmap/gd</item>
-         <item>@mipmap/hard</item>
-         <item>@mipmap/jq</item>
-         <item>@mipmap/photo</item>
-         <item>@mipmap/progr</item>
-         <item>@mipmap/sq</item>
-         <item>@mipmap/sur</item>
-         <item>@mipmap/three</item>
-         <item>@mipmap/web</item>
-     </string-array>
+    <string-array name="event_stack_icon">
+        <item>@mipmap/cm</item>
+        <item>@mipmap/crossword</item>
+        <item>@mipmap/di</item>
+        <item>@mipmap/encore</item>
+        <item>@mipmap/gaming</item>
+        <item>@mipmap/gd</item>
+        <item>@mipmap/hard</item>
+        <item>@mipmap/jq</item>
+        <item>@mipmap/photo</item>
+        <item>@mipmap/progr</item>
+        <item>@mipmap/sq</item>
+        <item>@mipmap/sur</item>
+        <item>@mipmap/three</item>
+        <item>@mipmap/web</item>
+    </string-array>
     <string-array name="event_stack">
         <item>Cryptic Marathon</item>
         <item>Crossword</item>
@@ -50,7 +50,9 @@
         <item>Web Designing</item>
     </string-array>
     <string-array name="event_desc_stack">
-        <item>Cryptic Marathon</item>
+        <item><![CDATA[
+        It’s a race for answers. Oh, and it’s cryptic.<p><b>Participants:</b> Team event (all participants for all other events).<p><b>Eligibility: </b>Open.
+        ]]></item>
         <item>Crossword</item>
         <item>Digital Imaging</item>
         <item>enCOЯE</item>

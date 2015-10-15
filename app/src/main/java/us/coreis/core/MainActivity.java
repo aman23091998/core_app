@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
         drawerRecyclerView.setAdapter(drawerAdapter);
         drawerRecyclerView.hasFixedSize();
         drawerRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+
         drawerSwitch();                        //DrawerToggle
 
         //Add the Very First i.e Home Fragment to the Container

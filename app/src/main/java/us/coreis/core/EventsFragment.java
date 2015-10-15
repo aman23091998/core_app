@@ -1,6 +1,6 @@
 package us.coreis.core;
 
-import android.content.Intent;
+import android.app.FragmentManager;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -18,7 +18,7 @@ public class EventsFragment extends android.support.v4.app.Fragment {
     private StackView stackView;
     private ArrayList<Stack_Items> list;
     TypedArray eventLogo;
-    String eventName[],eventDesc[];
+    String eventName[], eventDesc[];
 
     @Nullable
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -42,13 +42,13 @@ public class EventsFragment extends android.support.v4.app.Fragment {
                     view, int position, long id) {
                 MainActivity mainActivity = (MainActivity) getActivity();
                 FragmentTransaction fragmentTransaction = mainActivity.getSupportFragmentManager().beginTransaction();
-                String name = (position < eventName.length) ? eventName[position] : "";
-                String description = (position < eventDesc.length) ? eventDesc[position] : "";
-                Fragment eventDescFragment = DynamicEventsPage.newInstance(eventName[position], description,eventLogo.getResourceId(position, -1));
+                Fragment eventDescFragment = DynamicEventsPage.newInstance(eventName[position], eventDesc[position], eventLogo.getResourceId(position, -1));
                 fragmentTransaction.replace(R.id.containerView, eventDescFragment);
+                fragmentTransaction.addToBackStack("eventsPage");
                 fragmentTransaction.commit();
             }
         });
+
         adapter.notifyDataSetChanged();
         return view;
     }

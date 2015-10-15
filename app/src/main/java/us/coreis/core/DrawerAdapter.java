@@ -55,27 +55,32 @@ public class DrawerAdapter extends RecyclerView.Adapter<DrawerAdapter.ViewHolder
             switch (getAdapterPosition()){
                 case 1:
                     Fragment homeFragment = new HomeFragment();
-                    fragmentTransaction.replace(R.id.containerView,homeFragment);
+                    fragmentTransaction.replace(R.id.containerView, homeFragment);
+                    fragmentTransaction.addToBackStack("home");
                     fragmentTransaction.commit();
                     break;
                 case 2:
                     Fragment eventsFragment = new EventsFragment();
                     fragmentTransaction.replace(R.id.containerView,eventsFragment);
+                    fragmentTransaction.addToBackStack("home");
                     fragmentTransaction.commit();
                     break;
                 case 3:
                     Fragment encoreFragment = new EncoreFragment();
                     fragmentTransaction.replace(R.id.containerView,encoreFragment);
+                    fragmentTransaction.addToBackStack("home");
                     fragmentTransaction.commit();
                     break;
                 case 4:
                     Fragment contactFragment = new ContactFragment();
                     fragmentTransaction.replace(R.id.containerView,contactFragment);
+                    fragmentTransaction.addToBackStack("home");
                     fragmentTransaction.commit();
                     break;
                 case 5:
                     Fragment teamFragment = new TeamFragment();
                     fragmentTransaction.replace(R.id.containerView,teamFragment);
+                    fragmentTransaction.addToBackStack("home");
                     fragmentTransaction.commit();
                     break;
             }

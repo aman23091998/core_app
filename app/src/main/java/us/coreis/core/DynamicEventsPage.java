@@ -4,6 +4,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,9 +36,8 @@ public class DynamicEventsPage extends Fragment{
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         Bundle bundle = getArguments();
-        ((ImageView)view.findViewById(R.id.imageView)).setImageResource(bundle.getInt(BUNDLE_DRAWABLE_KEY));
-        ((TextView)view.findViewById(R.id.textView)).setText(bundle.getString(BUNDLE_STRING_KEY));
-        ((TextView)view.findViewById(R.id.textViewdesc)).setText(bundle.getString(BUNDLE_STRING_DESC_KEY));
+        ((ImageView)view.findViewById(R.id.eventIcon)).setImageResource(bundle.getInt(BUNDLE_DRAWABLE_KEY));
+        ((TextView)view.findViewById(R.id.eventName)).setText(bundle.getString(BUNDLE_STRING_KEY));
+        ((TextView)view.findViewById(R.id.eventDesc)).setText(Html.fromHtml(bundle.getString(BUNDLE_STRING_DESC_KEY)));
     }
-
 }
