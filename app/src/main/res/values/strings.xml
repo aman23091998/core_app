@@ -74,7 +74,7 @@
         <item>Rajat De Pro</item>
         <item>Ms. Sonica Chug</item>
         <item>Mr. Amit Dua</item>
-        </string-array>
+    </string-array>
     <string-array name="teamTag">
         <item>#Boss</item>
         <item>#ManBehindItAll</item>
@@ -100,6 +100,13 @@
         <item>@mipmap/sonica_maam</item>
         <item>@mipmap/amit_sir</item>
     </string-array>
+    <string name="aboutCore"><![CDATA[
+        <p aling="left">COЯE - Computer Obsessed Radical Enthusiasts, is the computer and technology club of Delhi Public School, Dwarka. Instituted in 2008 by the students of DPS Dwarka, COЯE was established with the aim of promoting competence and excellence in the field of computer and information technology at school, as well as various inter-school symposia. COЯE hosted its first Inter School Symposium in 2008. Since then, we have not looked back.
+        </p>
+        <p align="right">
+         Over the years, the club has progressed phenomenally, dominating several competitions and attaining victory. We have set high standards and ensure that we not only conform to these year after year, but set the bar a few notches higher. It takes a radical attitude, love for computers and an exceptional set of skills to be a part of the club."
+        </p>]]>
+</string>
 
     <string name="app_version"><![CDATA[ <b> App Version :</b>  0.23 <p><b>Build Date :</b>]]></string>
 

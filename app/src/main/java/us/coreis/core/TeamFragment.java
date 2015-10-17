@@ -28,6 +28,7 @@ public class TeamFragment extends android.support.v4.app.Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.about_layout, null);
+        ((TextView)view.findViewById(R.id.appDetails)).setText(Html.fromHtml(getString(R.string.app_version)));
         RecyclerView presCardRV = (RecyclerView) view.findViewById(R.id.presCardRV);
         RecyclerView devCardRV = (RecyclerView) view.findViewById(R.id.devCardRV);
         RecyclerView roleCardRV = (RecyclerView) view.findViewById(R.id.roleCardRV);
@@ -48,7 +49,6 @@ public class TeamFragment extends android.support.v4.app.Fragment {
         for (int i = imageID.length()-2; i < imageID.length(); i++) {
             role_model.add(new Card(name[i], tag[i], position[i], imageID.getResourceId(i, -1)));
         }
-        ((TextView)view.findViewById(R.id.appDetails)).setText(Html.fromHtml(getString(R.string.app_version)));
         dev.add(new Card("Aman Arora", "#MrAndroid", "Event Head", R.mipmap.developer));
         presCardRV.setHasFixedSize(true);
         devCardRV.setHasFixedSize(true);
