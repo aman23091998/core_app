@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="false">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:scrollbars="vertical"
+        android:weightSum="1">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/aboutCard"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:scrollbars="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="About Us"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/md_black_1000"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/md_grey_600" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                android:src="@mipmap/core_team" />
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/roleCard"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Our Role Models"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/md_black_1000"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/md_grey_600" />
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/roleCardRV"
+            android:layout_width="340dp"
+            android:layout_height="210dp"
+            android:layout_gravity="center" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/devCard"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Developer"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/md_black_1000"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/md_grey_600" />
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/devCardRV"
+            android:layout_width="340dp"
+            android:layout_height="105dp"
+            android:layout_gravity="center" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/md_grey_600" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Special Mention"
+                android:textColor="@color/md_black_1000"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_marginTop="18dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Sudhanshu Gautam"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/md_black_1000" />
+
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/teamCard"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:layout_marginTop="3dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Inspiring our Team"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/md_black_1000"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/md_grey_600" />
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/presCardRV"
+            android:layout_width="340dp"
+            android:layout_height="415dp"
+            android:layout_gravity="center" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/allMembers"
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="2dp"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Click Here to see the full list of members"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/flatui_midnight_blue"
+                android:textStyle="bold"/>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="340dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="About the APP"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/md_black_1000"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/md_grey_600" />
+
+            <TextView
+                android:id="@+id/appDetails"
+                android:layout_marginTop="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/md_black_1000" />
+
+        </android.support.v7.widget.CardView>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/md_grey_600" />
+
+    </LinearLayout>
+
+</ScrollView>

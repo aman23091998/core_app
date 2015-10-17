@@ -5,7 +5,7 @@
         <item>Events</item>
         <item>enCOЯE</item>
         <item>Contact Us</item>
-        <item>The Team</item>
+        <item>About Us</item>
     </string-array>
 
 
@@ -67,4 +67,40 @@
         <item>3D Modeling</item>
         <item>Web Designing</item>
     </string-array>
+    <string-array name="teamName">
+        <item>Bhuvesh Mehendiratta</item>
+        <item>Rohan Kumar</item>
+        <item>Sidhant Bansal</item>
+        <item>Rajat De Pro</item>
+        <item>Ms. Sonica Chug</item>
+        <item>Mr. Amit Dua</item>
+        </string-array>
+    <string-array name="teamTag">
+        <item>#Boss</item>
+        <item>#ManBehindItAll</item>
+        <item>#Algorithmist</item>
+        <item>youDontSayIt-#RDP</item>
+        <item> </item>
+        <item> </item>
+    </string-array>
+
+    <string-array name="teamPostion">
+        <item>President</item>
+        <item>Vice President</item>
+        <item>Secretary</item>
+        <item>Programming Head</item>
+        <item> </item>
+        <item> </item>
+    </string-array>
+    <string-array name="teamImages">
+        <item>@mipmap/bhuvi</item>
+        <item>@mipmap/rohan</item>
+        <item>@mipmap/sid_pro</item>
+        <item>@mipmap/rdp</item>
+        <item>@mipmap/sonica_maam</item>
+        <item>@mipmap/amit_sir</item>
+    </string-array>
+
+    <string name="app_version"><![CDATA[ <b> App Version :</b>  0.23 <p><b>Build Date :</b>]]></string>
+
 </resources>
