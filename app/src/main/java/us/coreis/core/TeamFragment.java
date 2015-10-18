@@ -16,13 +16,11 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import butterknife.Bind;
-
 
 public class TeamFragment extends android.support.v4.app.Fragment {
     @Nullable
 
-    ArrayList<Card> team, dev,role_model;
+    ArrayList<AboutUsCard> team, dev,role_model;
     String[] name, tag, position;
     TypedArray imageID;
 
@@ -40,22 +38,22 @@ public class TeamFragment extends android.support.v4.app.Fragment {
         tag = getResources().getStringArray(R.array.teamTag);
         position = getResources().getStringArray(R.array.teamPostion);
         imageID = getResources().obtainTypedArray(R.array.teamImages);
-        team = new ArrayList<Card>();
-        dev = new ArrayList<Card>();
-        role_model = new ArrayList<Card>();
+        team = new ArrayList<AboutUsCard>();
+        dev = new ArrayList<AboutUsCard>();
+        role_model = new ArrayList<AboutUsCard>();
         for (int i = 0; i < imageID.length()-2; i++) {
-            team.add(new Card(name[i], tag[i], position[i], imageID.getResourceId(i, -1)));
+            team.add(new AboutUsCard(name[i], tag[i], position[i], imageID.getResourceId(i, -1)));
         }
         for (int i = imageID.length()-2; i < imageID.length(); i++) {
-            role_model.add(new Card(name[i], tag[i], position[i], imageID.getResourceId(i, -1)));
+            role_model.add(new AboutUsCard(name[i], tag[i], position[i], imageID.getResourceId(i, -1)));
         }
-        dev.add(new Card("Aman Arora", "#MrAndroid", "Event Head", R.mipmap.developer));
+        dev.add(new AboutUsCard("Aman Arora", "#MrAndroid", "Event Head", R.mipmap.developer));
         presCardRV.setHasFixedSize(true);
         devCardRV.setHasFixedSize(true);
         roleCardRV.setHasFixedSize(true);
-        CardAdapter presAdapter = new CardAdapter(getActivity().getApplicationContext(), team);
-        CardAdapter devAdapter = new CardAdapter(getActivity().getApplicationContext(), dev);
-        CardAdapter roleAdapter = new CardAdapter(getActivity().getApplicationContext(), role_model);
+        AboutUsCardAdapter presAdapter = new AboutUsCardAdapter(getActivity().getApplicationContext(), team);
+        AboutUsCardAdapter devAdapter = new AboutUsCardAdapter(getActivity().getApplicationContext(), dev);
+        AboutUsCardAdapter roleAdapter = new AboutUsCardAdapter(getActivity().getApplicationContext(), role_model);
         presCardRV.setAdapter(presAdapter);
         devCardRV.setAdapter(devAdapter);
         roleCardRV.setAdapter(roleAdapter);

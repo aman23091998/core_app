@@ -2,30 +2,26 @@ package us.coreis.core;
 
 
 import android.content.Context;
-import android.graphics.drawable.shapes.Shape;
-import android.media.Image;
 import android.os.Handler;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.siyamed.shapeimageview.BubbleImageView;
-import com.github.siyamed.shapeimageview.ShapeImageView;
 
 import java.util.ArrayList;
 
-public class CardAdapter extends RecyclerView.Adapter<CardAdapter.Cards> {
-    ArrayList<Card> card;
+public class AboutUsCardAdapter extends RecyclerView.Adapter<AboutUsCardAdapter.Cards> {
+    ArrayList<AboutUsCard> aboutUsCard;
     Context context;
     static int ClickCount = 1;
 
-    public CardAdapter(Context context, ArrayList<Card> card) {
-        this.card = card;
+    public AboutUsCardAdapter(Context context, ArrayList<AboutUsCard> aboutUsCard) {
+        this.aboutUsCard = aboutUsCard;
         this.context = context;
     }
 
@@ -38,15 +34,15 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.Cards> {
 
     @Override
     public void onBindViewHolder(Cards holder, int position) {
-        holder.name.setText(card.get(position).name);
-        holder.position.setText(card.get(position).position);
-        holder.tag.setText(card.get(position).tag);
-        holder.image.setImageResource(card.get(position).ImageID);
+        holder.name.setText(aboutUsCard.get(position).name);
+        holder.position.setText(aboutUsCard.get(position).position);
+        holder.tag.setText(aboutUsCard.get(position).tag);
+        holder.image.setImageResource(aboutUsCard.get(position).ImageID);
     }
 
     @Override
     public int getItemCount() {
-        return card.size();
+        return aboutUsCard.size();
     }
 
     public class Cards extends RecyclerView.ViewHolder {
@@ -111,7 +107,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.Cards> {
                                 public void run() {
                                     toast.cancel();
                                 }
-                            }, 2500);
+                            }, 3500);
                             ClickCount = 0;
                         }
                     }

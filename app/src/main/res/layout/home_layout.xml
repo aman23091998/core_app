@@ -1,56 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent">
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/aboutCore1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="COЯE - Computer Obsessed Radical Enthusiasts, is the computer and technology club of Delhi Public School, Dwarka. Instituted in 2008 by the students of DPS dwarka, COЯE was established with the aim of promoting competence and excellence in the field of computer and information technology at school, as well as various inter-school symposia. COЯE hosted its first Inter School Symposium in 2008. Since then, we have not looked back. "
-        android:textColor="@color/flatui_clouds"
-        android:layout_alignParentLeft="true"/>
-    <View
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="4dp"
-        android:id="@+id/divider"
-        android:layout_below="@+id/aboutCore1" />
-    <TextView
-        android:id="@+id/aboutCore2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Over the years, the club has progressed phenomenally, dominating several competitions and attaining victory. We have set high standards and ensure that we not only conform to these year after year, but set the bar a few notches higher. It takes a radical attitude, love for computers and an exceptional set of skills to be a part of the club."
-        android:textColor="@color/flatui_clouds"
-        android:layout_below="@+id/divider"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="33dp"
-        android:layout_alignParentEnd="true" />
-    <in.raveesh.customtype.TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:layout_below="@+id/aboutCore2"
-        app:typeface="fonts/Track.ttf"
-        android:layout_gravity="center_horizontal"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Code is Poetry"
-        android:textColor="@color/flatui_clouds"
-        android:padding="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="2dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_alignParentEnd="false" />
-</RelativeLayout>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/aboutCore1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingLeft="20dp"
+            android:gravity="left"
+            android:text="COЯE - Computer Obsessed Radical Enthusiasts, is the computer and technology club of Delhi Public School, Dwarka. Instituted in 2008 by the students of DPS dwarka, COЯE was established with the aim of promoting competence and excellence in the field of computer and information technology at school, as well as various inter-school symposia. COЯE hosted its first Inter School Symposium in 2008. Since then, we have not looked back. "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/flatui_clouds" />
+
+        <TextView
+            android:id="@+id/aboutCore2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/aboutCore1"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:gravity="right"
+            android:text="Over the years, the club has progressed phenomenally, dominating several competitions and attaining victory. We have set high standards and ensure that we not only conform to these year after year, but set the bar a few notches higher. It takes a radical attitude, love for computers and an exceptional set of skills to be a part of the club."
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/flatui_clouds" />
+
+        <in.raveesh.customtype.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/aboutCore2"
+            android:text="Code is Poetry"
+            android:gravity="center"
+            android:layout_margin="20dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/flatui_clouds"
+            android:textStyle="bold"
+            app:typeface="fonts/Track.ttf" />
+    </RelativeLayout>
 </ScrollView>
