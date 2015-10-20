@@ -18,54 +18,113 @@
     </string-array>
 
     <string-array name="event_stack_icon">
+        <item>@mipmap/audio</item>
         <item>@mipmap/cm</item>
         <item>@mipmap/crossword</item>
         <item>@mipmap/di</item>
         <item>@mipmap/encore</item>
         <item>@mipmap/gaming</item>
         <item>@mipmap/gd</item>
+        <item>@mipmap/hack</item>
         <item>@mipmap/hard</item>
         <item>@mipmap/jq</item>
+        <item>@mipmap/octopia</item>
         <item>@mipmap/photo</item>
         <item>@mipmap/progr</item>
         <item>@mipmap/sq</item>
         <item>@mipmap/sur</item>
-        <item>@mipmap/three</item>
         <item>@mipmap/web</item>
+        <item>@mipmap/three</item>
     </string-array>
     <string-array name="event_stack">
+        <item>Audio/Video Editing</item>
         <item>Cryptic Marathon</item>
         <item>Crossword</item>
         <item>Digital Imaging</item>
         <item>enCOЯE</item>
         <item>Gaming</item>
         <item>Group Discussion</item>
+        <item>Hacking</item>
         <item>Hardware</item>
         <item>Junior Quiz</item>
+        <item>Octopia</item>
         <item>Photography</item>
         <item>Programming</item>
         <item>Senior Quiz</item>
         <item>Surprise</item>
-        <item>3D Modeling</item>
         <item>Web Designing</item>
+        <item>3D Modeling</item>
     </string-array>
     <string-array name="event_desc_stack">
+        <item><![CDATA[Sync. And a bit more.<p>
+
+        <p><b>Software provided:</b> Adobe Premier Pro CS4, Adobe After Effects CS4, Sony Vegas 10.0, Adobe SoundBooth CS6, FL Studio, Audacity.
+<p><b>Participants:</b> One team of two members.
+<p><b>Eligibility:</b> Open.
+
+        ]]></item>
         <item><![CDATA[
         It’s a race for answers. Oh, and it’s cryptic.<p><b>Participants:</b> Team event (all participants for all other events).<p><b>Eligibility: </b>Open.
         ]]></item>
-        <item>Crossword</item>
-        <item>Digital Imaging</item>
-        <item>enCOЯE</item>
-        <item>Gaming</item>
-        <item>Group Discussion</item>
-        <item>Hardware</item>
-        <item>Junior Quiz</item>
-        <item>Photography</item>
-        <item>Programming</item>
-        <item>Senior Quiz</item>
-        <item>Surprise</item>
-        <item>3D Modeling</item>
-        <item>Web Designing</item>
+        <item><![CDATA[Come to our event (5).<p>
+<b>Participants:</b> Two teams of two members.<p>
+<b>Eligibility:</b> Open.]]></item>
+        <item><![CDATA[Creativity, enough said.
+        <p>Software provided: Adobe Photoshop CS6.
+<p><b>Participants:</b> One team of two members.
+<p><b>Eligibility :</b> Open.]]></item>
+        <item><![CDATA[An online cryptic & creative hunt, encore.<p>
+<b>Timings:</b> 00:00 to 23:59, October 28th, 2015.<p>
+Participants: Team event (all participants for all other events).
+<b>Eligibility:</b> Open.]]></item>
+        <item><![CDATA[Pwned.<p>
+<b>Software provided:</b> Can’t tell you that already, now can we?<p>
+<b>Participants:</b> Two members.<p>
+<b>Eligibility:</b> Open.]]></item>
+        <item><![CDATA[A true test of speaking requires great content and greater impact. Send your best. <p>
+<b>Participants:</b> One member.<p>
+<b>Eligibility: </b>Open.]]></item>
+        <item><![CDATA[ Online event. Hack in, fellas.
+<p><b>Timings:</b> 00:00 to 23:59, October 27th, 2015.
+<p><b>Participants:</b> ∞ (Individual participation)
+<p><b>Eligibility:</b> Open.]]>
+</item>
+        <item><![CDATA[The things that make the creation of other things using some internal things possible. Hope you know your things well.<p>
+<b>Participants:</b> One team of two members.<p>
+<b>Eligibility:</b> Open.]]></item>
+        <item><![CDATA[An enigmatic quiz based on computer science and technology. Six teams shall be selected for the final round on the basis of a written preliminary round.<p>
+<b>Participants:</b> One team of two members.<p>
+<b>Eligibility:</b> 6th-10th]]></item>
+        <item><![CDATA[A test of eights, a test of everything. #boss
+<p><b>Participants:</b> One team of two members each.
+<p><b>Eligibility:</b> Open. ]]></item>
+        <item><![CDATA[Participants are required to bring their own gear (laptop, camera, lenses etc.). Drastic editing won’t be allowed.<p><b>Participants:</b> One member.<p><b>Eligibility: </b>Open.]]></item>
+        <item><![CDATA[
+        #include<RDP.h>
+void battle()<p>
+{<p>
+int level = 9000;<p>
+level++;<p>
+}<p>
+<b>Language: C++ </b>(Turbo C++ 3.0, Dev C++)<p>
+<b>Participants: </b>One team of two members each.<p>
+<b>Eligibility: </b>Open.]]></item>
+        <item><![CDATA[An enigmatic quiz based on computer science and technology. Six teams shall be selected for the final round on the basis of a written preliminary round.
+<p><b>Participants:</b> Two teams of two members each.
+<p><b>Eligibility:</b> Open.]]></item>
+        <item><![CDATA[[REDACTED]
+<p><b>Participants:</b> One team of two members.
+<p><b>Eligibility: </b>Open.]]></item>
+        <item><![CDATA[Participants will be required to make something creative and functional on the given topic.
+The participants will be provided with HTML5, CSS3, JQuery and AngularJS. Topics will be disclosed on the spot.
+
+Software provided: </b> Sublime Text 3, Gimp.
+<p><b>Participants: </b> One team of two members each.
+<p><b>Eligibility: </b> Open]]></item>
+        <item><![CDATA[A test of clean and skilful multidimensional aesthetics.
+<p><b>Software provided:</b> 3Ds Max 10, Blender, Maya.
+<p><b>Participants: </b>One member.
+<p><b>Eligibility:</b> Open.]]></item>
     </string-array>
     <string-array name="teamName">
         <item>Bhuvesh Mehendiratta</item>
