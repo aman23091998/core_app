@@ -112,4 +112,42 @@
     <string name="showCaseView">Click</string>
     <string name="showCaseViewDesc">Click</string>
 
+    <string-array name="callDetails_name">
+        <item>Delhi Public School </item>
+        <item> Ms. Sonica Chugh</item>
+        <item>Mrs. Pooja Batra </item>
+        <item>Bhuvesh Mehendiratta </item>
+        <item>Rohan Kumar</item>
+        <item>Sidhant Bansal </item>
+        <item>Anubhav Sharma </item>
+    </string-array>
+    <string-array name="callDetails_position">
+        <item>Dwarka</item>
+        <item>Teacher In-charge COЯE</item>
+        <item>Teacher In-charge Robodex</item>
+        <item> President COЯE</item>
+        <item> Vice President COЯE</item>
+        <item>Secretary COЯE</item>
+        <item>President Robodex</item>
+    </string-array>
+    <string-array name="callDetails_no">
+        <item>011-25074472-75 </item>
+        <item>9560849079</item>
+        <item>9810164182 </item>
+        <item>9910069946</item>
+        <item>9999020123</item>
+        <item>9811123720</item>
+        <item>9971997297</item>
+    </string-array>
+    
+    <string-array name="callDetails_email">
+        <item>mail@dpsdwarka.com</item>
+        <item>sonica_chugh@yahoo.co.in</item>
+        <item>batrapooja.11@gmail.com</item>
+        <item>bhuvesh@coreis.us</item>
+        <item>therohankumar7@gmail.com</item>
+        <item>sidhbansal@gmail.com</item>
+        <item>anubhav@sharma.ac</item>
+
+    </string-array>
 </resources>

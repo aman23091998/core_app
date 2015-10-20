@@ -111,6 +111,7 @@ public class AboutUsCardAdapter extends RecyclerView.Adapter<AboutUsCardAdapter.
                             ClickCount = 0;
                         }
                     }
+                    else ClickCount=0;
                 }
             });
         }
