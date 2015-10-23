@@ -13,6 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
+            android:textColor="@color/flatui_carrot"
             android:text="Contact Us"
             android:textSize="40dp"
             android:textStyle="bold" />
@@ -23,14 +24,15 @@
             android:layout_height="230dp"
             android:layout_marginTop="4dp"
             android:divider="@null"
-            android:scrollbars="none" />
+            android:scrollbars="vertical" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:text="Navigate to Us"
-            android:textSize="25dp" />
+            android:textSize="25dp"
+            android:textColor="@color/flatui_orange"/>
 
         <ImageView
             android:id="@+id/map"

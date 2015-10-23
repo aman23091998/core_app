@@ -17,6 +17,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_weight="0.03"
             android:gravity="center"
+            android:textColor="@color/md_black_1000"
             android:text="Medium Text"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textStyle="bold"/>
@@ -35,12 +36,14 @@
             android:id="@+id/eventDesc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/md_grey_900"
             android:layout_gravity="center_horizontal"
             android:layout_weight="0.40"
             android:gravity="center"
             android:paddingBottom="40dp"
             android:paddingTop="40dp"
-            android:text="New Text" />
+            android:text="New Text"
+            android:padding="4dp"/>
 
     </LinearLayout>
 

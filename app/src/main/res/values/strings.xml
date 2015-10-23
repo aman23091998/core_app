@@ -167,7 +167,7 @@ Software provided: </b> Sublime Text 3, Gimp.
         </p>]]>
 </string>
 
-    <string name="app_version"><![CDATA[ <b> App Version :</b>  0.23 <p><b>Build Date :</b>]]></string>
+    <string name="app_version"><![CDATA[ <b> App Version :</b>  0.23 <p><b>Build Date : </b> October 23 ,2015]]></string>
     <string name="showCaseView">Click</string>
     <string name="showCaseViewDesc">Click</string>
 

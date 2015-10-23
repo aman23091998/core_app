@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,7 +33,7 @@ public class EventsFragment extends android.support.v4.app.Fragment {
 
         //Adding items to the list
         for (int i = 0; i < eventLogo.length(); i++) {
-            list.add(new Stack_Items(eventName[i], eventLogo.getResourceId(i, -1)));
+            list.add(new Stack_Items( eventLogo.getResourceId(i, -1)));
         }
         //Calling adapter and setting it over stackView
         Stack_Adapter adapter = new Stack_Adapter(getActivity().getApplicationContext(), list);
@@ -50,6 +51,21 @@ public class EventsFragment extends android.support.v4.app.Fragment {
         });
 
         adapter.notifyDataSetChanged();
+        view.setFocusableInTouchMode(true);
+        view.requestFocus();
+        view.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (keyCode == KeyEvent.KEYCODE_BACK) {
+                    FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction().add(new HomeFragment(), "home");
+                    Fragment home = new HomeFragment();
+                    fragmentTransaction.replace(R.id.containerView, home);
+                    fragmentTransaction.commit();
+                    return true;
+                }
+                return false;
+            }
+        });
         return view;
     }
 }

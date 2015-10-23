@@ -41,22 +41,18 @@ public class Stack_Adapter extends BaseAdapter {
         if (view == null) {
             view = inflater.inflate(R.layout.stack_layout, parent, false);
             holder = new ViewHolder();
-
-            holder.text = (TextView) view.findViewById(R.id.textView1);
             holder.image = (ImageView) view.findViewById(R.id.imageView1);
             view.setTag(holder);
         } else {
             holder = (ViewHolder) view.getTag();
         }
 
-        holder.text.setText(arrayList.get(pos).getName());
         holder.image.setBackgroundResource(arrayList.get(pos).getImage());
 
         return view;
     }
 
     public class ViewHolder {
-        TextView text;
         ImageView image;
     }
 }

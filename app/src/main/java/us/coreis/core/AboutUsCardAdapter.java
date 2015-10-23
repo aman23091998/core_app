@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,7 +37,6 @@ public class AboutUsCardAdapter extends RecyclerView.Adapter<AboutUsCardAdapter.
     public void onBindViewHolder(Cards holder, int position) {
         holder.name.setText(aboutUsCard.get(position).name);
         holder.position.setText(aboutUsCard.get(position).position);
-        holder.tag.setText(aboutUsCard.get(position).tag);
         holder.image.setImageResource(aboutUsCard.get(position).ImageID);
     }
 
@@ -47,15 +47,14 @@ public class AboutUsCardAdapter extends RecyclerView.Adapter<AboutUsCardAdapter.
 
     public class Cards extends RecyclerView.ViewHolder {
         CardView cardView;
-        TextView name, tag, position;
-        BubbleImageView image;
+        TextView name, position;
+        ImageView image;
 
         public Cards(View itemView) {
             super(itemView);
             cardView = (CardView) itemView.findViewById(R.id.cardView);
-            image = (com.github.siyamed.shapeimageview.BubbleImageView) itemView.findViewById(R.id.team_photo);
+            image = (ImageView) itemView.findViewById(R.id.team_photo);
             name = (TextView) itemView.findViewById(R.id.team_name);
-            tag = (TextView) itemView.findViewById(R.id.team_tag);
             position = (TextView) itemView.findViewById(R.id.team_position);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

@@ -3,46 +3,49 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/aboutCore1"
-            android:layout_width="match_parent"
+               <ImageView
+            android:id="@+id/core"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:paddingLeft="20dp"
-            android:gravity="left"
-            android:text="COЯE - Computer Obsessed Radical Enthusiasts, is the computer and technology club of Delhi Public School, Dwarka. Instituted in 2008 by the students of DPS dwarka, COЯE was established with the aim of promoting competence and excellence in the field of computer and information technology at school, as well as various inter-school symposia. COЯE hosted its first Inter School Symposium in 2008. Since then, we have not looked back. "
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/flatui_clouds" />
+            android:gravity="center_horizontal"
+            android:layout_margin="40dp"
+            android:src="@mipmap/corelogo"
+            android:layout_gravity="center_horizontal"/>
 
         <TextView
             android:id="@+id/aboutCore2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/aboutCore1"
-            android:paddingTop="10dp"
-            android:paddingRight="20dp"
-            android:gravity="right"
-            android:text="Over the years, the club has progressed phenomenally, dominating several competitions and attaining victory. We have set high standards and ensure that we not only conform to these year after year, but set the bar a few notches higher. It takes a radical attitude, love for computers and an exceptional set of skills to be a part of the club."
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/core"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_horizontal"
+            android:padding="8dp"
+            android:text="Computer Obsessed Radical Enthusiasts, is the computer and technology club of Delhi Public School, Dwarka.  "
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/flatui_clouds" />
+            android:textColor="@color/md_black_1000" />
 
         <in.raveesh.customtype.TextView
-            android:layout_width="match_parent"
+            android:id="@+id/codeIsPoetry"
+            android:layout_width="291dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/aboutCore2"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center_horizontal"
             android:text="Code is Poetry"
-            android:gravity="center"
-            android:layout_margin="20dp"
+            android:layout_gravity="center_horizontal"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/flatui_clouds"
+            android:textColor="#ff9000"
             android:textStyle="bold"
-            app:typeface="fonts/Track.ttf" />
-    </RelativeLayout>
+            android:layout_margin="40dp"
+            app:typeface="fonts/Molengo-Regular.ttf" />
+    </LinearLayout>
 </ScrollView>

@@ -1,62 +1,125 @@
 package us.coreis.core;
 
-import android.support.v4.app.Fragment;
-import android.content.res.TypedArray;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.os.Handler;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.widget.StackView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
-import java.util.ArrayList;
+import com.yalantis.guillotine.animation.GuillotineAnimation;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
-    @Bind(R.id.drawer_layout) DrawerLayout drawerLayout;
-    @Bind(R.id.toolbar)    Toolbar toolbar;
-    @Bind(R.id.drawer_recyclerView)  RecyclerView drawerRecyclerView ;
-    ActionBarDrawerToggle drawerToggle ;
+    private static final long RIPPLE_DURATION = 250;
+    @Bind(R.id.toolbar)
+    Toolbar toolbar;
+    @Bind(R.id.root)
+    FrameLayout root;
+    @Bind(R.id.content_hamburger)
+    View contentHamburger;
+    boolean doubleBackToExitPressedOnce = false;
+    Fragment curF;
 
-    public void onCreate(Bundle savedInstanceState) {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        drawerToggle= new ActionBarDrawerToggle(this ,drawerLayout ,toolbar ,R.string.app_name ,R.string.app_name );
-        setSupportActionBar(toolbar);
-        drawerLayout.setDrawerListener(drawerToggle);
-        drawerToggle.syncState();
-        String rows[];
-        TypedArray navIcons;
 
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+            getSupportActionBar().setTitle(null);
+        }
 
-        rows =getResources().getStringArray(R.array.navDrawerItems) ;
-
-        navIcons = getResources().obtainTypedArray(R.array.navDrawerIcons);
-
-        DrawerAdapter drawerAdapter =new DrawerAdapter(rows ,navIcons , this );
-        drawerRecyclerView.setAdapter(drawerAdapter);
-        drawerRecyclerView.hasFixedSize();
-        drawerRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-
-        drawerSwitch();                        //DrawerToggle
-
-        //Add the Very First i.e Home Fragment to the Container
-        Fragment homeFragment = new HomeFragment();
+        View guillotineMenu = LayoutInflater.from(this).inflate(R.layout.guillotine, null);
+        root.addView(guillotineMenu);
+        final LinearLayout aboutUs = (LinearLayout) guillotineMenu.findViewById(R.id.about_group);
+        final LinearLayout mHome = (LinearLayout) guillotineMenu.findViewById(R.id.home_group);
+        final LinearLayout events = (LinearLayout) guillotineMenu.findViewById(R.id.events_group);
+        final LinearLayout contactUs = (LinearLayout) guillotineMenu.findViewById(R.id.contact_group);
+        final LinearLayout encore = (LinearLayout) guillotineMenu.findViewById(R.id.encore_group);
+        final GuillotineAnimation GA = new GuillotineAnimation.GuillotineBuilder(guillotineMenu, guillotineMenu.findViewById(R.id.guillotine_hamburger), contentHamburger)
+                .setStartDelay(RIPPLE_DURATION)
+                .setActionBarViewForAnimation(toolbar)
+                .setClosedOnStart(true)
+                .build();
+        getFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.containerView, homeFragment, null);
+        Fragment home = new HomeFragment();
+        fragmentTransaction.replace(R.id.containerView, home);
+
         fragmentTransaction.commit();
-    }
-    void drawerSwitch(){
-        drawerToggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.app_name,R.string.app_name);
-        //This is necessary to change the icon of the Drawer Toggle upon state change.
-        drawerToggle.syncState();
+
+        mHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                Fragment home = new HomeFragment();
+                fragmentTransaction.replace(R.id.containerView, home);
+
+                GA.close();
+                fragmentTransaction.commit();
+            }
+        });
+
+        events.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                Fragment eventsF = new EventsFragment();
+                fragmentTransaction.replace(R.id.containerView, eventsF);
+
+                GA.close();
+                fragmentTransaction.commit();
+            }
+        });
+
+        encore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                Fragment encoreF = new EncoreFragment();
+                fragmentTransaction.replace(R.id.containerView, encoreF);
+
+                GA.close();
+                fragmentTransaction.commit();
+            }
+        });
+        contactUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                Fragment contact_us = new ContactFragment();
+                fragmentTransaction.replace(R.id.containerView, contact_us);
+
+                GA.close();
+                fragmentTransaction.commit();
+            }
+        });
+
+        aboutUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                Fragment about_us = new TeamFragment();
+                fragmentTransaction.replace(R.id.containerView, about_us);
+
+                GA.close();
+                fragmentTransaction.commit();
+            }
+        });
+
     }
 }

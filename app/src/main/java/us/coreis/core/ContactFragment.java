@@ -4,7 +4,6 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.graphics.Point;
 import android.net.Uri;
 import android.os.Bundle;
@@ -13,19 +12,19 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.view.Display;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.baoyz.swipemenulistview.SwipeMenu;
 import com.baoyz.swipemenulistview.SwipeMenuCreator;
 import com.baoyz.swipemenulistview.SwipeMenuItem;
 import com.baoyz.swipemenulistview.SwipeMenuListView;
-import com.daimajia.androidanimations.library.Techniques;
-import com.daimajia.androidanimations.library.YoYo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,43 +33,39 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 
 public class ContactFragment extends android.support.v4.app.Fragment {
     String[] name, positions, email, contactNo;
-    static boolean pop=true;
+    static boolean pop = true;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.contact_layout, null);
-        YoYo.with(Techniques.FlipInX)
-                .duration(700)
-                .playOn(view.findViewById(R.id.contactUS));
         name = getResources().getStringArray(R.array.callDetails_name);
         contactNo = getResources().getStringArray(R.array.callDetails_no);
         email = getResources().getStringArray(R.array.callDetails_email);
-        positions=getResources().getStringArray(R.array.callDetails_position);
+        positions = getResources().getStringArray(R.array.callDetails_position);
         SwipeMenuListView listView = (SwipeMenuListView) view.findViewById(R.id.callList);
         final List<CallDetails> list = new ArrayList<>();
         for (int i = 0; i < name.length; ++i) {
-            list.add(new CallDetails(name[i], contactNo[i], email[i],positions[i]));
+            list.add(new CallDetails(name[i], contactNo[i], email[i], positions[i]));
         }
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getContext());
         if (!prefs.getBoolean("firstTime", false)) {
-            if(pop) {
+            if (pop) {
                 SweetAlertDialog popdialog = new SweetAlertDialog(getContext(), SweetAlertDialog.NORMAL_TYPE);
-                popdialog.setTitleText("CLICK THE NAME");
-                popdialog.setContentText("For more information. ");
-                popdialog.setConfirmText("OK");
+                popdialog.setTitleText("TAP FOR MORE INFO");
+                popdialog.setConfirmText("Got it");
                 popdialog.setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
                     @Override
                     public void onClick(SweetAlertDialog sdialog) {
-                        sdialog.setTitleText("SLIDE RIGHT TO LEFT");
-                        sdialog.setContentText("To directly place a call or email.");
-                        sdialog.show();
-                        sdialog.setConfirmText("Got IT");
+                        sdialog.setTitleText("SLIDE LEFT");
+                        sdialog.setContentText("to directly call or email");        sdialog.show();
+                        sdialog.setConfirmText("Got it");
                         sdialog.changeAlertType(SweetAlertDialog.NORMAL_TYPE);
                         sdialog.setConfirmClickListener(null);
                     }
                 });
                 popdialog.show();
-                pop=false;
+                pop = false;
             }
             SharedPreferences.Editor editor = prefs.edit();
             editor.putBoolean("firstTime", true);
@@ -83,7 +78,7 @@ public class ContactFragment extends android.support.v4.app.Fragment {
         Point size = new Point();
         display.getSize(size);
         final int width = size.x;
-        int height =size.y;
+        int height = size.y;
         SwipeMenuCreator creator = new SwipeMenuCreator() {
 
             @Override
@@ -95,7 +90,7 @@ public class ContactFragment extends android.support.v4.app.Fragment {
                 item1.setWidth(width / 3);
                 item1.setTitle("Call");
                 item1.setTitleSize(18);
-                item1.setTitleColor(Color.WHITE);
+                item1.setTitleColor(getResources().getColor(R.color.md_grey_600));
                 menu.addMenuItem(item1);
 
                 SwipeMenuItem item2 = new SwipeMenuItem(
@@ -103,14 +98,14 @@ public class ContactFragment extends android.support.v4.app.Fragment {
                 item2.setWidth(width / 3);
                 item2.setTitle("Copy No.");
                 item2.setTitleSize(18);
-                item2.setTitleColor(Color.WHITE);
+                item2.setTitleColor(getResources().getColor(R.color.md_grey_600));
                 menu.addMenuItem(item2);
                 SwipeMenuItem item3 = new SwipeMenuItem(
                         getActivity().getApplicationContext());
                 item3.setWidth(width / 3);
                 item3.setTitle("Email");
                 item3.setTitleSize(18);
-                item3.setTitleColor(Color.WHITE);
+                item3.setTitleColor(getResources().getColor(R.color.md_grey_600));
                 menu.addMenuItem(item3);
 
 
@@ -118,6 +113,7 @@ public class ContactFragment extends android.support.v4.app.Fragment {
         };
         //set MenuCreator
         listView.setMenuCreator(creator);
+        listView.setMinimumHeight(height/2);
         // set SwipeListener
         listView.setOnSwipeListener(new SwipeMenuListView.OnSwipeListener() {
 
@@ -131,7 +127,6 @@ public class ContactFragment extends android.support.v4.app.Fragment {
                 // swipe end
             }
         });
-
 
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -187,7 +182,7 @@ public class ContactFragment extends android.support.v4.app.Fragment {
                 return false;
             }
         });
-        ImageView imageView =(ImageView)view.findViewById(R.id.map);
+        ImageView imageView = (ImageView) view.findViewById(R.id.map);
         imageView.setMaxWidth(width);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -199,8 +194,21 @@ public class ContactFragment extends android.support.v4.app.Fragment {
             }
         });
 
-
-
+        view.setFocusableInTouchMode(true);
+        view.requestFocus();
+        view.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (keyCode == KeyEvent.KEYCODE_BACK) {
+                    FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction().add(new HomeFragment(), "home");
+                    Fragment home = new HomeFragment();
+                    fragmentTransaction.replace(R.id.containerView, home);
+                    fragmentTransaction.commit();
+                    return true;
+                }
+                return false;
+            }
+        });
         return view;
     }
 
