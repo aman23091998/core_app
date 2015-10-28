@@ -3,20 +3,21 @@
     <string-array name="navDrawerItems">
         <item>Home</item>
         <item>Events</item>
+        <item>Schedule</item>
         <item>enCOЯE</item>
         <item>Contact Us</item>
         <item>About Us</item>
     </string-array>
 
 
-    <string-array name="navDrawerIcons">
+<!--    <string-array name="navDrawerIcons">
         <item>@mipmap/home</item>
         <item>@mipmap/events</item>
         <item>@mipmap/encore_nav</item>
         <item>@mipmap/contact</item>
         <item>@mipmap/team</item>
     </string-array>
-
+-->
     <string-array name="event_stack_icon">
         <item>@mipmap/audio</item>
         <item>@mipmap/cm</item>
@@ -70,12 +71,12 @@
 <b>Participants:</b> Two teams of two members.<p>
 <b>Eligibility:</b> Open.]]></item>
         <item><![CDATA[Creativity, enough said.
-        <p>Software provided: Adobe Photoshop CS6.
+        <b><p>Software provided:</b> Adobe Photoshop CS6.
 <p><b>Participants:</b> One team of two members.
 <p><b>Eligibility :</b> Open.]]></item>
         <item><![CDATA[An online cryptic & creative hunt, encore.<p>
 <b>Timings:</b> 00:00 to 23:59, October 28th, 2015.<p>
-Participants: Team event (all participants for all other events).
+<b>Participants:</b> Team event (all participants for all other events).<p>
 <b>Eligibility:</b> Open.]]></item>
         <item><![CDATA[Pwned.<p>
 <b>Software provided:</b> Can’t tell you that already, now can we?<p>
@@ -100,7 +101,7 @@ Participants: Team event (all participants for all other events).
 <p><b>Eligibility:</b> Open. ]]></item>
         <item><![CDATA[Participants are required to bring their own gear (laptop, camera, lenses etc.). Drastic editing won’t be allowed.<p><b>Participants:</b> One member.<p><b>Eligibility: </b>Open.]]></item>
         <item><![CDATA[
-        #include<RDP.h>
+        #include &lt;RDP.h&gt;<p>
 void battle()<p>
 {<p>
 int level = 9000;<p>
@@ -131,7 +132,7 @@ Software provided: </b> Sublime Text 3, Gimp.
         <item>Rohan Kumar</item>
         <item>Sidhant Bansal</item>
         <item>Rajat De Pro</item>
-        <item>Ms. Sonica Chug</item>
+        <item>Ms. Sonica Chugh</item>
         <item>Mr. Amit Dua</item>
     </string-array>
     <string-array name="teamTag">
@@ -153,7 +154,7 @@ Software provided: </b> Sublime Text 3, Gimp.
     </string-array>
     <string-array name="teamImages">
         <item>@mipmap/bhuvi</item>
-        <item>@mipmap/rohan</item>
+        <item>@mipmap/rohan_updated</item>
         <item>@mipmap/sid_pro</item>
         <item>@mipmap/rdp</item>
         <item>@mipmap/sonica_maam</item>
@@ -167,7 +168,7 @@ Software provided: </b> Sublime Text 3, Gimp.
         </p>]]>
 </string>
 
-    <string name="app_version"><![CDATA[ <b> App Version :</b>  0.23 <p><b>Build Date : </b> October 23 ,2015]]></string>
+    <string name="app_version"><![CDATA[ <b> App Version :</b>  0.23 <p><b>Build Date : </b> October 27, 2015]]></string>
     <string name="showCaseView">Click</string>
     <string name="showCaseViewDesc">Click</string>
 
@@ -182,12 +183,12 @@ Software provided: </b> Sublime Text 3, Gimp.
     </string-array>
     <string-array name="callDetails_position">
         <item>Dwarka</item>
-        <item>Teacher In-charge COЯE</item>
-        <item>Teacher In-charge Robodex</item>
-        <item> President COЯE</item>
-        <item> Vice President COЯE</item>
-        <item>Secretary COЯE</item>
-        <item>President Robodex</item>
+        <item>Teacher, In-charge COЯE</item>
+        <item>Teacher, In-charge Robodex</item>
+        <item> President, COЯE</item>
+        <item> Vice President, COЯE</item>
+        <item>Secretary, COЯE</item>
+        <item>President, Robodex</item>
     </string-array>
     <string-array name="callDetails_no">
         <item>011-25074472-75 </item>
@@ -207,6 +208,5 @@ Software provided: </b> Sublime Text 3, Gimp.
         <item>therohankumar7@gmail.com</item>
         <item>sidhbansal@gmail.com</item>
         <item>anubhav@sharma.ac</item>
-
     </string-array>
 </resources>

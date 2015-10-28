@@ -21,17 +21,18 @@ public class CallListAdapter extends ArrayAdapter<CallDetails> {
     List<CallDetails> callDetail;
 
 
-    public CallListAdapter(Activity activity, int resourceId, List<CallDetails> objects){
+    public CallListAdapter(Activity activity, int resourceId, List<CallDetails> objects) {
         super(activity, resourceId, objects);
         layout = resourceId;
-        inflater = (LayoutInflater)activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        callDetail=objects;
+        inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        callDetail = objects;
     }
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View v = inflater.inflate(layout, parent, false);
-        TextView tv = (TextView)v.findViewById(R.id.callDetail);
-        tv.setText(Html.fromHtml(callDetail.get(position).name + " , " + callDetail.get(position).position));
-        return v;
+        View view = inflater.inflate(layout, parent, false);
+        TextView tv = (TextView) view.findViewById(R.id.callDetail);
+         tv.setText(Html.fromHtml(callDetail.get(position).name + " , " + callDetail.get(position).position));
+        return view;
     }
 }

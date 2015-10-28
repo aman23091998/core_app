@@ -29,25 +29,10 @@ public class EncoreFragment extends android.support.v4.app.Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        Display display = getActivity().getWindowManager().getDefaultDisplay();
-        Point size = new Point();
-        display.getSize(size);
-        final int width = size.x;
-        int height = size.y;
         view = inflater.inflate(R.layout.encore_layout, null);
         newtonCradleLoading = (NewtonCradleLoading) view.findViewById(R.id.newton_cradle_loading);
         newtonCradleLoading.start();
 
-      /*  RelativeLayout rL = (RelativeLayout) view.findViewById(R.id.rl);
-        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(
-                RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT);
-        rL.setLayoutParams(layoutParams);
-
-        LinearLayout.LayoutParams cradleParams = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        rL.setLayoutParams(layoutParams);
-
-        newtonCradleLoading.setLayoutParams(layoutParams);*/
         txtTimerDay = (TextView) view.findViewById(R.id.txtTimerDay);
         txtTimerHour = (TextView) view.findViewById(R.id.txtTimerHour);
         txtTimerMinute = (TextView) view.findViewById(R.id.txtTimerMinute);
@@ -59,19 +44,7 @@ public class EncoreFragment extends android.support.v4.app.Fragment {
         countDownStart();
         view.setFocusableInTouchMode(true);
         view.requestFocus();
-        view.setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if (keyCode == KeyEvent.KEYCODE_BACK) {
-                    FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction().add(new HomeFragment(), "home");
-                    Fragment home = new HomeFragment();
-                    fragmentTransaction.replace(R.id.containerView, home);
-                    fragmentTransaction.commit();
-                    return true;
-                }
-                return false;
-            }
-        });
+
         return view;
     }
 

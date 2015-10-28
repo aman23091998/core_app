@@ -29,7 +29,9 @@ public class DynamicEventsPage extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.dynamic_events_page, container, false);
+        View view =inflater.inflate(R.layout.dynamic_events_page, container, false);
+        TextView desc= (TextView) view.findViewById(R.id.eventDesc);
+        return view;
     }
 
     @Override

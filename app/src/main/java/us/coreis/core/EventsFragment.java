@@ -53,19 +53,7 @@ public class EventsFragment extends android.support.v4.app.Fragment {
         adapter.notifyDataSetChanged();
         view.setFocusableInTouchMode(true);
         view.requestFocus();
-        view.setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if (keyCode == KeyEvent.KEYCODE_BACK) {
-                    FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction().add(new HomeFragment(), "home");
-                    Fragment home = new HomeFragment();
-                    fragmentTransaction.replace(R.id.containerView, home);
-                    fragmentTransaction.commit();
-                    return true;
-                }
-                return false;
-            }
-        });
+
         return view;
     }
 }

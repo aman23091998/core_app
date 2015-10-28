@@ -47,14 +47,15 @@ public class AboutUsCardAdapter extends RecyclerView.Adapter<AboutUsCardAdapter.
 
     public class Cards extends RecyclerView.ViewHolder {
         CardView cardView;
-        TextView name, position;
+        TextView  position;
+        in.raveesh.customtype.TextView name;
         ImageView image;
 
         public Cards(View itemView) {
             super(itemView);
             cardView = (CardView) itemView.findViewById(R.id.cardView);
             image = (ImageView) itemView.findViewById(R.id.team_photo);
-            name = (TextView) itemView.findViewById(R.id.team_name);
+            name = (in.raveesh.customtype.TextView) itemView.findViewById(R.id.team_name);
             position = (TextView) itemView.findViewById(R.id.team_position);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -98,7 +99,7 @@ public class AboutUsCardAdapter extends RecyclerView.Adapter<AboutUsCardAdapter.
                                 }
                             }, 1500);
                         } else {
-                            final Toast toast =Toast.makeText(context, " Flaw in my code Huh..!?Bitch!That's a feature!", duration);
+                            final Toast toast =Toast.makeText(context, " Flaw in the code? Or is it? Guess you'll never know. ", duration);
                             toast.show();
                             Handler handler = new Handler();
                             handler.postDelayed(new Runnable() {
@@ -106,7 +107,7 @@ public class AboutUsCardAdapter extends RecyclerView.Adapter<AboutUsCardAdapter.
                                 public void run() {
                                     toast.cancel();
                                 }
-                            }, 3500);
+                            }, 4000);
                             ClickCount = 0;
                         }
                     }

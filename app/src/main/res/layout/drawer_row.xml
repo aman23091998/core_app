@@ -2,26 +2,22 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="@dimen/drawer_option_height">
-       <ImageView
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:id="@+id/drawer_row_icon"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_gravity="center_vertical"
-        android:src="@mipmap/ic_launcher"
-        android:paddingTop="2dp"   />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="65dp"
-        android:layout_marginLeft="65dp"
+        android:paddingLeft="10dp"
         android:layout_gravity="center_vertical"
-        android:textColor="@color/md_black_1000"
-        android:textSize="36dp"
+        android:textColor="@color/md_white_1000"
+        android:textSize="25dp"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:singleLine="true"
         android:id="@+id/drawer_row_text" />
+
+    <View
+        android:id="@+id/drawer_row_sep"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/md_white_1000"/>
 
 </FrameLayout>

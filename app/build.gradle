@@ -8,13 +8,18 @@ android {
         applicationId "us.coreis.core"
         minSdkVersion 15
         targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        versionCode 7
+        versionName "0.23"
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    output.outputFile = file("$project.buildDir/apk/COЯE.apk")
+                }
+            }
         }
     }
 }
@@ -41,5 +46,4 @@ dependencies {
     compile 'com.daimajia.easing:library:1.0.1@aar'
     compile 'com.github.amlcurran.showcaseview:library:5.0.0'
     compile 'com.victor:lib:1.0.1'
-    compile 'com.github.Yalantis:GuillotineMenu-Android:v1.0'
 }

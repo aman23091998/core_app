@@ -21,7 +21,7 @@
         <com.baoyz.swipemenulistview.SwipeMenuListView
             android:id="@+id/callList"
             android:layout_width="match_parent"
-            android:layout_height="230dp"
+            android:layout_height="245dp"
             android:layout_marginTop="4dp"
             android:divider="@null"
             android:scrollbars="vertical" />

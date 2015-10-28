@@ -18,6 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -107,13 +108,10 @@ public class ContactFragment extends android.support.v4.app.Fragment {
                 item3.setTitleSize(18);
                 item3.setTitleColor(getResources().getColor(R.color.md_grey_600));
                 menu.addMenuItem(item3);
-
-
             }
         };
         //set MenuCreator
         listView.setMenuCreator(creator);
-        listView.setMinimumHeight(height/2);
         // set SwipeListener
         listView.setOnSwipeListener(new SwipeMenuListView.OnSwipeListener() {
 
@@ -196,19 +194,7 @@ public class ContactFragment extends android.support.v4.app.Fragment {
 
         view.setFocusableInTouchMode(true);
         view.requestFocus();
-        view.setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if (keyCode == KeyEvent.KEYCODE_BACK) {
-                    FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction().add(new HomeFragment(), "home");
-                    Fragment home = new HomeFragment();
-                    fragmentTransaction.replace(R.id.containerView, home);
-                    fragmentTransaction.commit();
-                    return true;
-                }
-                return false;
-            }
-        });
+
         return view;
     }
 
