@@ -4,7 +4,7 @@
         <item>Home</item>
         <item>Events</item>
         <item>Schedule</item>
-        <item>enCOЯE</item>
+        <item>Hacking</item>
         <item>Contact Us</item>
         <item>About Us</item>
     </string-array>
@@ -168,7 +168,7 @@ Software provided: </b> Sublime Text 3, Gimp.
         </p>]]>
 </string>
 
-    <string name="app_version"><![CDATA[ <b> App Version :</b>  0.23 <p><b>Build Date : </b> October 27, 2015]]></string>
+    <string name="app_version"><![CDATA[ <b> App Version :</b>  0.46 <p><b>Build Date : </b> October 29, 2015]]></string>
     <string name="showCaseView">Click</string>
     <string name="showCaseViewDesc">Click</string>
 

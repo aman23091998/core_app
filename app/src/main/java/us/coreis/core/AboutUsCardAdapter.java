@@ -12,8 +12,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.github.siyamed.shapeimageview.BubbleImageView;
-
 import java.util.ArrayList;
 
 public class AboutUsCardAdapter extends RecyclerView.Adapter<AboutUsCardAdapter.Cards> {
